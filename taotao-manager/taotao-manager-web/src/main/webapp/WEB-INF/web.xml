@@ -46,6 +46,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>taotao-manager</servlet-name>
+		<!-- 配置拦截url的请求格式，此时静态资源也会被拦截，所以得需要在springmvc.xml中做单独的额外配置！ -->
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 </web-app>
