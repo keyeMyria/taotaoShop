@@ -25,7 +25,7 @@ public class FTPTest {
 		//设置上传的路径
 		ftpClient.changeWorkingDirectory("/home/ftpuser/www/images");
 		//修改上传文件的格式
-		ftpClient.setFileType(FTP.BINARY_FILE_TYPE);
+		ftpClient.setFileType(FTP.BINARY_FILE_TYPE);//二进制
 		//第一个参数：服务器端文档名
 		//第二个参数：上传文档的inputStream
 		ftpClient.storeFile("hello1.jpg", inputStream);

@@ -27,7 +27,7 @@ import com.taotao.service.PictureService;
 public class PictureServiceImpl implements PictureService {
 	
 	@Value("${FTP_ADDRESS}")
-	private String FTP_ADDRESS;
+	private String FTP_ADDRESS;//把这些常量放在一个配置文件中！（此时是定义了一个属性文件）
 	@Value("${FTP_PORT}")
 	private Integer FTP_PORT;
 	@Value("${FTP_USERNAME}")
