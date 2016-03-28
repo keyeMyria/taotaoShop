@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class CatNode {
 
-	@JsonProperty("n")
+	@JsonProperty("n")//属性转换成json格式数据时候，对应的key值，默认为属性名称
 	private String name;
 	@JsonProperty("u")
 	private String url;
