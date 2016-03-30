@@ -26,9 +26,9 @@ import com.taotao.portal.service.ContentService;
 @Service
 public class ContentServiceImpl implements ContentService {
 
-	@Value("${REST_BASE_URL}")
+	@Value("${REST_BASE_URL}")//基础url地址
 	private String REST_BASE_URL;
-	@Value("${REST_INDEX_AD_URL}")
+	@Value("${REST_INDEX_AD_URL}")//首页大广告位url地址
 	private String REST_INDEX_AD_URL;
 	
 	@Override

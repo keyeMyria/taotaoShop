@@ -15,10 +15,10 @@ import com.taotao.portal.service.ContentService;
 public class IndexController {
 	
 	@Autowired
-	private ContentService contentService;
+	private ContentService contentService;//注入Service
 
 	@RequestMapping("/index")
-	public String showIndex(Model model) {
+	public String showIndex(Model model) {//展示首页的
 		String adJson = contentService.getContentList();
 		model.addAttribute("ad1", adJson);
 		

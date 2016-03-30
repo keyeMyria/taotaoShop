@@ -26,6 +26,8 @@ public class ItemCatController {
 	@Autowired
 	private ItemCatService itemCatService;
 
+	//测试地址http://localhost:8081/rest/itemcat/list?callback=category.getDataService
+	
 	/*@RequestMapping(value="/itemcat/list", 
 			produces=MediaType.APPLICATION_JSON_VALUE + ";charset=utf-8")
 	@ResponseBody
@@ -39,7 +41,7 @@ public class ItemCatController {
 	}*/
 	@RequestMapping("/itemcat/list")
 	@ResponseBody
-	public Object getItemCatList(String callback) {
+	public Object getItemCatList(String callback) {//springmvc 4.1版本之后才能用该方法
 		CatResult catResult = itemCatService.getItemCatList();
 		MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(catResult);
 		mappingJacksonValue.setJsonpFunction(callback);

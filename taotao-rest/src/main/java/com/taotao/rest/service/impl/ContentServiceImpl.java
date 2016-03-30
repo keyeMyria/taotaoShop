@@ -53,7 +53,7 @@ public class ContentServiceImpl implements ContentService {
 		
 		//根据内容分类id查询内容列表
 		TbContentExample example = new TbContentExample();
-		Criteria criteria = example.createCriteria();
+		Criteria criteria = example.createCriteria();//创建一个查询条件
 		criteria.andCategoryIdEqualTo(contentCid);
 		//执行查询
 		List<TbContent> list = contentMapper.selectByExample(example);

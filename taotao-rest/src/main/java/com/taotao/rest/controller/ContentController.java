@@ -32,12 +32,12 @@ public class ContentController {
 	@RequestMapping("/list/{contentCategoryId}")
 	@ResponseBody
 	public TaotaoResult getContentList(@PathVariable Long contentCategoryId) {
-		try {
+		try {//服务处理查询时候抛异常的情况
 			List<TbContent> list = contentService.getContentList(contentCategoryId);
 			return TaotaoResult.ok(list);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));
+			return TaotaoResult.build(500, ExceptionUtil.getStackTrace(e));//500表示状态码，ExceptionUtil.getStackTrace(e))是异常信息
 		}
 	}
 }
