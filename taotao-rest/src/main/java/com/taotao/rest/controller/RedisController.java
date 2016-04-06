@@ -26,8 +26,9 @@ public class RedisController {
 	private RedisService redisService;
 	
 	@RequestMapping("/content/{contentCid}")
-	@ResponseBody
-	public TaotaoResult contentCacheSync(@PathVariable Long contentCid) {
+	@ResponseBody 
+	public TaotaoResult contentCacheSync(@PathVariable Long contentCid) {//@PathVariable表示从请求路径中把contentCid这个参数取出来！
+		//没有@ResponseBody会出现404错误
 		TaotaoResult result = redisService.syncContent(contentCid);
 		return result;
 	}

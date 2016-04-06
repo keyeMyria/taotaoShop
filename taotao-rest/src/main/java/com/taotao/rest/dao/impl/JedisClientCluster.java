@@ -13,7 +13,7 @@ public class JedisClientCluster implements JedisClient {//如果想用这个dao�
 	
 	@Override
 	public String get(String key) {
-		return jedisCluster.get(key);
+		return jedisCluster.get(key);//jedisCluster不能关，关了，其他的就用不了！不同于JedisPool
 	}
 
 	@Override

@@ -13,10 +13,10 @@ import com.taotao.rest.service.RedisService;
 public class RedisServiceImpl implements RedisService {
 
 	@Autowired
-	private JedisClient jedisClient;
+	private JedisClient jedisClient;//注入JedisClient
 	
 	@Value("${INDEX_CONTENT_REDIS_KEY}")
-	private String INDEX_CONTENT_REDIS_KEY;
+	private String INDEX_CONTENT_REDIS_KEY;//将静态文件中的value值注入进来
 	
 	@Override
 	public TaotaoResult syncContent(long contentCid) {

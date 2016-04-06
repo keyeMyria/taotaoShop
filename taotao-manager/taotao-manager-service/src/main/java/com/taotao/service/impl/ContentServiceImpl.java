@@ -44,6 +44,7 @@ public class ContentServiceImpl implements ContentService {
 			HttpClientUtil.doGet(REST_BASE_URL + REST_CONTENT_SYNC_URL + content.getCategoryId());
 		} catch (Exception e) {
 			e.printStackTrace();
+			//短信或邮寄通知管理员
 		}
 		
 		return TaotaoResult.ok();
