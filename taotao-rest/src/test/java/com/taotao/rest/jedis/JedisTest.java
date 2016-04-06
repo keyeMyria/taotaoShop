@@ -85,7 +85,7 @@ public class JedisTest {
 	 */
 	@Test
 	public void testSpringJedisSingle() {
-		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");
+		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");//加载配置文件，创建实例
 		JedisPool pool = (JedisPool) applicationContext.getBean("redisClient");
 		Jedis jedis = pool.getResource();
 		String string = jedis.get("key1");
@@ -94,6 +94,9 @@ public class JedisTest {
 		pool.close();
 	}
 	
+	/**
+	 * 集群版测试
+	 * */
 	@Test
 	public void testSpringJedisCluster() {
 		ApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring/applicationContext-*.xml");

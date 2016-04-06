@@ -7,7 +7,7 @@ import com.taotao.rest.dao.JedisClient;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 
-public class JedisClientSingle implements JedisClient{
+public class JedisClientSingle implements JedisClient{//如果想用这个dao，那么dao层上面应该加一个注解或者在配置文件中配置一下，但我们这个地方就不用注解了，直接在配置文件中配
 	
 	@Autowired
 	private JedisPool jedisPool; 
