@@ -68,6 +68,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<!-- 如果不添加此节点mybatis的mapper.xml等静态文件都会被漏掉。 -->
 		<resources>
 			<resource>
 				<directory>src/main/java</directory>
