@@ -1,7 +1,9 @@
 package com.taotao.search.pojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-
+/**
+ * 手动写的，无法逆向工程，因为设计三表关联查询
+ * */
 public class Item {
 
 	private String id;
