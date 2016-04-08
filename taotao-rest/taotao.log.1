@@ -511,22 +511,17 @@
 2016-04-08 16:47:28,442 [http-bio-8081-exec-2] [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor]-[DEBUG] Written [org.springframework.http.converter.json.MappingJacksonValue@7909e06a] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4904b6]
 2016-04-08 16:47:28,442 [http-bio-8081-exec-2] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Null ModelAndView returned to DispatcherServlet with name 'taotao-manager': assuming HandlerAdapter completed request handling
 2016-04-08 16:47:28,442 [http-bio-8081-exec-2] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Successfully completed request
-2016-04-08 16:49:48,398 [main] [org.apache.solr.client.solrj.impl.HttpClientUtil]-[DEBUG] Creating new http client, config:maxConnections=128&maxConnectionsPerHost=32&followRedirects=false
-2016-04-08 16:49:48,715 [main] [org.apache.http.impl.conn.PoolingClientConnectionManager]-[DEBUG] Connection request: [route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 0 of 32; total allocated: 0 of 128]
-2016-04-08 16:49:48,723 [main] [org.apache.http.impl.conn.PoolingClientConnectionManager]-[DEBUG] Connection leased: [id: 0][route: {}->http://127.0.0.1:8080][total kept alive: 0; route allocated: 1 of 32; total allocated: 1 of 128]
-2016-04-08 16:49:48,725 [main] [org.apache.http.impl.conn.DefaultClientConnectionOperator]-[DEBUG] Connecting to 127.0.0.1:8080
-2016-04-08 16:49:48,744 [main] [org.apache.http.client.protocol.RequestAddCookies]-[DEBUG] CookieSpec selected: best-match
-2016-04-08 16:49:48,764 [main] [org.apache.http.client.protocol.RequestAuthCache]-[DEBUG] Auth cache not set in the context
-2016-04-08 16:49:48,765 [main] [org.apache.http.client.protocol.RequestTargetAuthentication]-[DEBUG] Target auth state: UNCHALLENGED
-2016-04-08 16:49:48,765 [main] [org.apache.http.client.protocol.RequestProxyAuthentication]-[DEBUG] Proxy auth state: UNCHALLENGED
-2016-04-08 16:49:48,765 [main] [org.apache.http.impl.client.SystemDefaultHttpClient]-[DEBUG] Attempt 1 to execute request
-2016-04-08 16:49:48,766 [main] [org.apache.http.impl.conn.DefaultClientConnection]-[DEBUG] Sending request: POST /solr/update?wt=javabin&version=2 HTTP/1.1
-2016-04-08 16:49:48,766 [main] [org.apache.http.wire]-[DEBUG]  >> "POST /solr/update?wt=javabin&version=2 HTTP/1.1[\r][\n]"
-2016-04-08 16:49:48,767 [main] [org.apache.http.wire]-[DEBUG]  >> "User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0[\r][\n]"
-2016-04-08 16:49:48,767 [main] [org.apache.http.wire]-[DEBUG]  >> "Transfer-Encoding: chunked[\r][\n]"
-2016-04-08 16:49:48,768 [main] [org.apache.http.wire]-[DEBUG]  >> "Content-Type: application/xml; charset=UTF-8[\r][\n]"
-2016-04-08 16:49:48,768 [main] [org.apache.http.wire]-[DEBUG]  >> "Host: 127.0.0.1:8080[\r][\n]"
-2016-04-08 16:49:48,768 [main] [org.apache.http.wire]-[DEBUG]  >> "Connection: Keep-Alive[\r][\n]"
+2016-04-08 17:05:09,636 [http-bio-8081-exec-4] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] DispatcherServlet with name 'taotao-manager' processing GET request for [/rest/content/list/89]
+2016-04-08 17:05:09,638 [http-bio-8081-exec-4] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[DEBUG] Looking up handler method for path /content/list/89
+2016-04-08 17:05:09,640 [http-bio-8081-exec-4] [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[DEBUG] Returning handler method [public com.taotao.common.pojo.TaotaoResult com.taotao.rest.controller.ContentController.getContentList(java.lang.Long)]
+2016-04-08 17:05:09,641 [http-bio-8081-exec-4] [org.springframework.beans.factory.support.DefaultListableBeanFactory]-[DEBUG] Returning cached instance of singleton bean 'contentController'
+2016-04-08 17:05:09,641 [http-bio-8081-exec-4] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Last-Modified value for [/rest/content/list/89] is: -1
+2016-04-08 17:05:09,652 [http-bio-8081-exec-4] [org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdviceChain]-[DEBUG] Invoking ResponseBodyAdvice chain for body=com.taotao.common.pojo.TaotaoResult@6802b972
+2016-04-08 17:05:09,652 [http-bio-8081-exec-4] [org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdviceChain]-[DEBUG] After ResponseBodyAdvice chain body=com.taotao.common.pojo.TaotaoResult@6802b972
+2016-04-08 17:05:09,654 [http-bio-8081-exec-4] [org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor]-[DEBUG] Written [com.taotao.common.pojo.TaotaoResult@6802b972] as "application/json;charset=UTF-8" using [org.springframework.http.converter.json.MappingJackson2HttpMessageConverter@4904b6]
+2016-04-08 17:05:09,654 [http-bio-8081-exec-4] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Null ModelAndView returned to DispatcherServlet with name 'taotao-manager': assuming HandlerAdapter completed request handling
+2016-04-08 17:05:09,654 [http-bio-8081-exec-4] [org.springframework.web.servlet.DispatcherServlet]-[DEBUG] Successfully completed request
+49:48,768 [main] [org.apache.http.wire]-[DEBUG]  >> "Connection: Keep-Alive[\r][\n]"
 2016-04-08 16:49:48,768 [main] [org.apache.http.wire]-[DEBUG]  >> "[\r][\n]"
 2016-04-08 16:49:48,768 [main] [org.apache.http.headers]-[DEBUG] >> POST /solr/update?wt=javabin&version=2 HTTP/1.1
 2016-04-08 16:49:48,768 [main] [org.apache.http.headers]-[DEBUG] >> User-Agent: Solr[org.apache.solr.client.solrj.impl.HttpSolrServer] 1.0
