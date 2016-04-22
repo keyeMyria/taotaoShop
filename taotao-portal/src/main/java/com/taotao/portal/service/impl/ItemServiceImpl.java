@@ -42,7 +42,7 @@ public class ItemServiceImpl implements ItemService {
 	public ItemInfo getItemById(Long itemId) {
 
 		try {
-			//调用rest的服务查询商品基本信息
+			//调用rest的服务（Http服务）查询商品基本信息
 			String json = HttpClientUtil.doGet(REST_BASE_URL + ITME_INFO_URL + itemId);
 			if (!StringUtils.isBlank(json)) {
 				TaotaoResult taotaoResult = TaotaoResult.formatToPojo(json, ItemInfo.class);

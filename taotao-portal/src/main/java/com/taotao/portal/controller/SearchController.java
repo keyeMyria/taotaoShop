@@ -29,8 +29,8 @@ public class SearchController {
 	@RequestMapping("/search")
 	public String search(@RequestParam("q")String queryString, @RequestParam(defaultValue="1")Integer page, Model model) {
 		if (queryString != null) {
-			try {
-				queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");
+			try {//捕获异常
+				queryString = new String(queryString.getBytes("iso8859-1"), "utf-8");//乱码解决
 			} catch (UnsupportedEncodingException e) {
 				e.printStackTrace();
 			}
@@ -42,7 +42,7 @@ public class SearchController {
 		model.addAttribute("itemList", searchResult.getItemList());
 		model.addAttribute("page", page);
 		
-		return "search";
+		return "search";//返回逻辑视图
 		
 	}
 }

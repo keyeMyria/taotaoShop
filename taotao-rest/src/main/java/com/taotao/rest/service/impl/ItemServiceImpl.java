@@ -104,7 +104,7 @@ public class ItemServiceImpl implements ItemService {
 			//把商品信息写入缓存
 			jedisClient.set(REDIS_ITEM_KEY + ":" + itemId + ":desc", JsonUtils.objectToJson(itemDesc));
 			//设置key的有效期
-			jedisClient.expire(REDIS_ITEM_KEY + ":" + itemId + ":desc", REDIS_ITEM_EXPIRE);
+			jedisClient.expire(REDIS_ITEM_KEY + ":" + itemId + ":desc", REDIS_ITEM_EXPIRE);//hash不能设置过期时间
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
