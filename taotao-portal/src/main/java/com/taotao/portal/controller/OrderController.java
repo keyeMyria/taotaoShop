@@ -56,8 +56,9 @@ public class OrderController {
 		} catch (Exception e) {
 			e.printStackTrace();
 			model.addAttribute("message", "创建订单出错。请稍后重试！");
+			//此时前台和后台不在同一事物，所以前台出现异常无法回滚后台服务，只能通过在后台服务提供一个删除该异常订单的接口，然后在此处去删除该订单！
+			//此处通过邮件或短信通知给研发
 			return "error/exception";
 		}
 	}
-	
 }
