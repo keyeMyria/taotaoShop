@@ -52,7 +52,7 @@ public class OrderServiceImpl implements OrderService {
 		//向订单表中插入记录
 		//获得订单号
 		String string = jedisClient.get(ORDER_GEN_KEY);
-		if (StringUtils.isBlank(string)) {
+		if (StringUtils.isBlank(string)) {//初始化的值，否则就会是1、2、3、4....，这样不太好吧！
 			jedisClient.set(ORDER_GEN_KEY, ORDER_INIT_ID);
 		}
 		long orderId = jedisClient.incr(ORDER_GEN_KEY);
