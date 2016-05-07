@@ -21,7 +21,7 @@ public class SolrCloudTest {
 		SolrInputDocument document = new SolrInputDocument();
 		//向文档中添加域
 		document.addField("id", "test001");
-		document.addField("item_title", "测试商品");
+		document.addField("item_title", "测试商品");//要保证solrhome中有配置item_title这个字段
 		//把文档添加到索引库
 		solrServer.add(document);
 		//提交
@@ -37,8 +37,7 @@ public class SolrCloudTest {
 		//设置默认的collection
 		solrServer.setDefaultCollection("collection2");
 		
-		
-		solrServer.deleteByQuery("*:*");
+		solrServer.deleteByQuery("*:*");//删除所有的
 		solrServer.commit();
 	}
 }
