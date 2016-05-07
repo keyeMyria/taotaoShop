@@ -29,7 +29,7 @@ import com.taotao.search.pojo.SearchResult;
 public class SearchDaoImpl implements SearchDao {
 	
 	@Autowired
-	private SolrServer solrServer;
+	private SolrServer solrServer;//在SearchDaoImpl中我们注入了SolrServer，同时CloudSolrServer、HTTPServer等是SolrServer子类，在Spring中注入了其子类的实现也是可以对SolrServer进行注入的！
 
 	@Override
 	public SearchResult search(SolrQuery query) throws Exception {
